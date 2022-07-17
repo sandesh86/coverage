@@ -1,0 +1,164 @@
+2022-07-17 20:08:50.510 [main] INFO  com.diffblue.interview.coverage.TestRunner - ############ Test Execution Begins #############
+2022-07-17 20:08:50.570 [main] INFO  com.diffblue.interview.coverage.TestRunner - ########### Test Execution Complete ############
+2022-07-17 20:08:50.633 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Coverage of class - com/diffblue/interview/code/FileUtils
+2022-07-17 20:08:50.634 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 1  	| package com.diffblue.interview.code;
+2022-07-17 20:08:50.634 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 2  	| 
+2022-07-17 20:08:50.634 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 3  	| import java.io.BufferedReader;
+2022-07-17 20:08:50.634 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 4  	| import java.io.File;
+2022-07-17 20:08:50.635 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 5  	| import java.io.FileReader;
+2022-07-17 20:08:50.635 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 6  	| import java.io.IOException;
+2022-07-17 20:08:50.635 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 7  	| import java.lang.annotation.Annotation;
+2022-07-17 20:08:50.635 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 8  	| import java.lang.reflect.Method;
+2022-07-17 20:08:50.635 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 9  	| import java.net.URL;
+2022-07-17 20:08:50.635 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 10  	| import java.util.ArrayList;
+2022-07-17 20:08:50.636 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 11  	| import java.util.Arrays;
+2022-07-17 20:08:50.636 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 12  	| import java.util.Collections;
+2022-07-17 20:08:50.636 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 13  	| import java.util.Enumeration;
+2022-07-17 20:08:50.636 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 14  	| import java.util.HashSet;
+2022-07-17 20:08:50.636 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 15  	| import java.util.List;
+2022-07-17 20:08:50.637 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 16  	| import java.util.Map;
+2022-07-17 20:08:50.637 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 17  	| import java.util.Set;
+2022-07-17 20:08:50.637 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 18  	| import java.util.function.Function;
+2022-07-17 20:08:50.637 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 19  	| import java.util.stream.Collectors;
+2022-07-17 20:08:50.637 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 20  	| 
+2022-07-17 20:08:50.637 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 21  	| import org.apache.logging.log4j.LogManager;
+2022-07-17 20:08:50.637 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 22  	| import org.apache.logging.log4j.Logger;
+2022-07-17 20:08:50.638 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 23  	| 
+2022-07-17 20:08:50.638 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 24  	| import com.diffblue.interview.CodeClass;
+2022-07-17 20:08:50.638 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 25  	| import com.diffblue.interview.CodeLine;
+2022-07-17 20:08:50.638 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 26  	| import com.diffblue.interview.impl.CodeClassImpl;
+2022-07-17 20:08:50.638 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 27  	| import com.diffblue.interview.impl.CodeLineImpl;
+2022-07-17 20:08:50.638 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 28  	| 
+2022-07-17 20:08:50.639 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 29 Yellow 	| public class FileUtils {
+2022-07-17 20:08:50.639 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 30  	| 	
+2022-07-17 20:08:50.639 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 31 Green 	| 	private static final Logger logger = LogManager.getLogger(FileUtils.class);
+2022-07-17 20:08:50.639 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 32  	| 	
+2022-07-17 20:08:50.639 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 33  	| 	private static final Map<String, CodeClass> codeClassMap;
+2022-07-17 20:08:50.639 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 34  	| 	
+2022-07-17 20:08:50.639 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 35  	| 	static {
+2022-07-17 20:08:50.640 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 36 Green 	| 		List<File> resultList = new ArrayList<>();
+2022-07-17 20:08:50.640 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 37  	| 
+2022-07-17 20:08:50.640 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 38 Green 	| 		List<File> files = listFiles(System.getProperty("user.dir"), resultList);
+2022-07-17 20:08:50.640 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 39  	| 
+2022-07-17 20:08:50.640 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 40 Green 	| 		codeClassMap = files.stream().map(FileUtils::readClass)
+2022-07-17 20:08:50.640 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 41 Green 	| 			.collect(Collectors.toMap(CodeClass::getName, Function.identity()));
+2022-07-17 20:08:50.640 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 42 Green 	| 	}
+2022-07-17 20:08:50.641 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 43  	| 	
+2022-07-17 20:08:50.641 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 44  	| 	public static Set<Class<? extends Object>> getAllClasses() {
+2022-07-17 20:08:50.641 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 45  	| 		try {
+2022-07-17 20:08:50.641 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 46 Green 	| 			return getAllClasses("com.diffblue.interview");
+2022-07-17 20:08:50.641 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 47 Red 	| 		} catch (ClassNotFoundException | IOException e) {
+2022-07-17 20:08:50.641 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 48 Red 	| 			logger.info("Error while loading the classes", e);
+2022-07-17 20:08:50.641 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 49 Red 	| 			throw new RuntimeException(e);
+2022-07-17 20:08:50.642 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 50  	| 		}
+2022-07-17 20:08:50.642 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 51  	| 	}
+2022-07-17 20:08:50.642 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 52  	| 	
+2022-07-17 20:08:50.642 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 53  	| 	public static Map<String, CodeClass> getCodeClassMap() {
+2022-07-17 20:08:50.642 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 54 Green 	| 		return Collections.unmodifiableMap(codeClassMap);
+2022-07-17 20:08:50.642 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 55  	| 	}
+2022-07-17 20:08:50.642 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 56  	| 
+2022-07-17 20:08:50.642 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 57  	| 	public static List<File> listFiles(String directoryName, List<File> resultList) {
+2022-07-17 20:08:50.643 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 58 Green 	|         File directory = new File(directoryName);
+2022-07-17 20:08:50.643 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 59  	| 
+2022-07-17 20:08:50.643 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 60 Green 	|         File[] fList = directory.listFiles();
+2022-07-17 20:08:50.643 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 61 Green 	|         List<File> javaFiles = Arrays.stream(fList)
+2022-07-17 20:08:50.644 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 62 Green 	|         		.filter(file -> file.getName().endsWith(".java"))
+2022-07-17 20:08:50.644 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 63 Green 	|         		.collect(Collectors.toList());
+2022-07-17 20:08:50.644 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 64 Green 	|         resultList.addAll(javaFiles);
+2022-07-17 20:08:50.647 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 65  	|         
+2022-07-17 20:08:50.648 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 66 Green 	|         Arrays.stream(fList)
+2022-07-17 20:08:50.648 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 67 Green 	|         	.filter(File::isDirectory)
+2022-07-17 20:08:50.648 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 68 Green 	|         	.forEach(file -> listFiles(file.getAbsolutePath(), resultList));
+2022-07-17 20:08:50.648 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 69  	|         
+2022-07-17 20:08:50.648 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 70 Green 	|         return resultList;
+2022-07-17 20:08:50.649 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 71  	|     }
+2022-07-17 20:08:50.649 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 72  	| 	
+2022-07-17 20:08:50.649 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 73  	| 	public static CodeClass readClass(File file) {
+2022-07-17 20:08:50.649 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 74 Green 	| 		List<CodeLine> codeLines = new ArrayList<>();
+2022-07-17 20:08:50.649 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 75 Green 	| 		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+2022-07-17 20:08:50.649 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 76  	| 		    String line;
+2022-07-17 20:08:50.650 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 77 Green 	| 		    int lineNumber = 1;
+2022-07-17 20:08:50.650 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 78 Green 	| 		    while ((line = br.readLine()) != null) {		    	
+2022-07-17 20:08:50.650 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 79 Green 	| 		    	CodeLineImpl codeLine = new CodeLineImpl(lineNumber, line);
+2022-07-17 20:08:50.650 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 80 Green 	| 		    	codeLines.add(codeLine);		    	
+2022-07-17 20:08:50.650 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 81 Green 	| 		    	lineNumber++;
+2022-07-17 20:08:50.650 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 82  	| 		    }
+2022-07-17 20:08:50.651 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 83 Red 	| 		} catch (IOException e) {
+2022-07-17 20:08:50.651 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 84 Red 	| 			logger.error("Exception occured while reading class", e);
+2022-07-17 20:08:50.651 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 85 Red 	| 			throw new RuntimeException(e);
+2022-07-17 20:08:50.651 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 86  	| 		}
+2022-07-17 20:08:50.651 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 87 Green 	| 		codeLines.sort((code1, code2) -> 
+2022-07-17 20:08:50.651 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 88 Green 	| 			Integer.compare(code1.getLineNumber(), code2.getLineNumber()));
+2022-07-17 20:08:50.652 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 89  	| 		
+2022-07-17 20:08:50.652 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 90 Green 	| 		return new CodeClassImpl(codeLines, file);		
+2022-07-17 20:08:50.652 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 91  	| 	}
+2022-07-17 20:08:50.652 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 92  	| 	
+2022-07-17 20:08:50.652 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 93  	| 	
+2022-07-17 20:08:50.652 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 94  	| 	public static List<Method> getMethodsAnnotatedWith(final Class<?> type, 
+2022-07-17 20:08:50.652 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 95  	| 			final Class<? extends Annotation> annotation) {
+2022-07-17 20:08:50.653 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 96 Green 	| 	    final List<Method> methods = new ArrayList<>();
+2022-07-17 20:08:50.653 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 97 Green 	| 	    Class<?> klass = type;
+2022-07-17 20:08:50.653 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 98 Green 	| 	    while (klass != null && klass != Object.class) { 
+2022-07-17 20:08:50.653 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 99  	| 	    	
+2022-07-17 20:08:50.653 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 100 Green 	| 	        for (final Method method : klass.getDeclaredMethods()) {
+2022-07-17 20:08:50.653 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 101 Green 	| 	            if (method.isAnnotationPresent(annotation)) {
+2022-07-17 20:08:50.654 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 102 Green 	| 	                methods.add(method);
+2022-07-17 20:08:50.654 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 103  	| 	            }
+2022-07-17 20:08:50.654 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 104  	| 	        }
+2022-07-17 20:08:50.654 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 105 Green 	| 	        klass = klass.getSuperclass();
+2022-07-17 20:08:50.654 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 106  	| 	    }
+2022-07-17 20:08:50.654 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 107 Green 	| 	    return methods;
+2022-07-17 20:08:50.654 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 108  	| 	}
+2022-07-17 20:08:50.655 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 109  	| 	
+2022-07-17 20:08:50.655 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 110  	| 	/**
+2022-07-17 20:08:50.655 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 111  	| 	 * Scans all classes accessible from the context class loader which belong to the given package and subpackages.
+2022-07-17 20:08:50.655 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 112  	| 	 *
+2022-07-17 20:08:50.655 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 113  	| 	 * @param packageName The base package
+2022-07-17 20:08:50.655 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 114  	| 	 * @return The classes
+2022-07-17 20:08:50.655 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 115  	| 	 * @throws ClassNotFoundException
+2022-07-17 20:08:50.656 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 116  	| 	 * @throws IOException
+2022-07-17 20:08:50.656 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 117  	| 	 */
+2022-07-17 20:08:50.656 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 118  	| 	private static Set<Class<? extends Object>> getAllClasses(String packageName)
+2022-07-17 20:08:50.656 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 119  	| 	        throws ClassNotFoundException, IOException {
+2022-07-17 20:08:50.656 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 120 Green 	| 	    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+2022-07-17 20:08:50.656 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 121 Yellow 	| 	    assert classLoader != null;
+2022-07-17 20:08:50.656 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 122 Green 	| 	    String path = packageName.replace('.', '/');
+2022-07-17 20:08:50.657 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 123 Green 	| 	    Enumeration<URL> resources = classLoader.getResources(path);
+2022-07-17 20:08:50.657 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 124 Green 	| 	    List<File> dirs = new ArrayList<File>();
+2022-07-17 20:08:50.657 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 125 Green 	| 	    while (resources.hasMoreElements()) {
+2022-07-17 20:08:50.657 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 126 Green 	| 	        URL resource = resources.nextElement();
+2022-07-17 20:08:50.658 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 127 Green 	| 	        dirs.add(new File(resource.getFile()));
+2022-07-17 20:08:50.658 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 128  	| 	    }
+2022-07-17 20:08:50.658 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 129 Green 	| 	    Set<Class<? extends Object>> classes = new HashSet<>();
+2022-07-17 20:08:50.658 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 130 Green 	| 	    for (File directory : dirs) {
+2022-07-17 20:08:50.658 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 131 Green 	| 	        classes.addAll(findClasses(directory, packageName));
+2022-07-17 20:08:50.658 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 132  	| 	    }
+2022-07-17 20:08:50.658 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 133 Green 	| 	    return classes;
+2022-07-17 20:08:50.658 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 134  	| 	}
+2022-07-17 20:08:50.659 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 135  	| 
+2022-07-17 20:08:50.659 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 136  	| 	/**
+2022-07-17 20:08:50.659 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 137  	| 	 * Recursive method used to find all classes in a given directory and subdirs.
+2022-07-17 20:08:50.659 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 138  	| 	 *
+2022-07-17 20:08:50.659 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 139  	| 	 * @param directory   The base directory
+2022-07-17 20:08:50.659 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 140  	| 	 * @param packageName The package name for classes found inside the base directory
+2022-07-17 20:08:50.659 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 141  	| 	 * @return The classes
+2022-07-17 20:08:50.659 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 142  	| 	 * @throws ClassNotFoundException
+2022-07-17 20:08:50.659 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 143  	| 	 */
+2022-07-17 20:08:50.660 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 144  	| 	private static List<Class<? extends Object>> findClasses(File directory, String packageName) throws ClassNotFoundException {
+2022-07-17 20:08:50.660 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 145 Green 	| 	    List<Class<? extends Object>> classes = new ArrayList<>();
+2022-07-17 20:08:50.660 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 146 Yellow 	| 	    if (!directory.exists()) {
+2022-07-17 20:08:50.660 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 147 Red 	| 	        return classes;
+2022-07-17 20:08:50.660 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 148  	| 	    }
+2022-07-17 20:08:50.660 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 149 Green 	| 	    File[] files = directory.listFiles();
+2022-07-17 20:08:50.660 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 150 Green 	| 	    for (File file : files) {
+2022-07-17 20:08:50.661 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 151 Green 	| 	        if (file.isDirectory()) {
+2022-07-17 20:08:50.661 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 152 Yellow 	| 	            assert !file.getName().contains(".");
+2022-07-17 20:08:50.661 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 153 Green 	| 	            classes.addAll(findClasses(file, packageName + "." + file.getName()));
+2022-07-17 20:08:50.661 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 154 Yellow 	| 	        } else if (file.getName().endsWith(".class")) {
+2022-07-17 20:08:50.662 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 155 Green 	| 	            classes.add(Class.forName(packageName + '.' + file.getName().substring(0, file.getName().length() - 6)));
+2022-07-17 20:08:50.662 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 156  	| 	        }
+2022-07-17 20:08:50.662 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 157  	| 	    }
+2022-07-17 20:08:50.662 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 158 Green 	| 	    return classes;
+2022-07-17 20:08:50.662 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 159  	| 	}
+2022-07-17 20:08:50.662 [main] INFO  com.diffblue.interview.coverage.CoverageApp - Line 160  	| }
+2022-07-17 20:08:50.663 [main] INFO  com.diffblue.interview.coverage.CoverageApp - ########## Done with coverage ##########
